@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="222630564117-lv1nuu0h7iih3q1b23dtufqcpag882qf.apps.googleusercontent.com">
+</head>
+<body>
+    <div class="login-container">
+        <div class="bar" style="font-family: 'Geist Sans';"><h1><span style="color: #E06AFF;">TAX</span><span class = "genie-text">GENIE</span></h1></div>
+        <h2>Login</h2>
+        <form id="login-form">
+            <div class="input-box">
+                <input type="email" id="email" placeholder="you@example.com" required>
+                <label for="email">Email</label>
+            </div>
+            <div class="input-box">
+                <input type="password" id="password" placeholder="********" required>
+                <label for="password">Password</label>
+            </div>
+            <button type="submit" class="btn login-btn">Login</button>
+            <button type="button" class="btn signup-btn">Sign Up</button>
+        </form>
+        
+        <div class="or-divider">OR</div>
+        
+        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+
+        <p class="forgot-password">
+            Forgot your password? <a href="#">Reset</a>
+        </p>
+    </div>
+    <button class="theme-toggle" id="theme-toggle-btn">Switch to Light Mode</button>
+    <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+/* Default to Dark Mode */
+
+font-face {
+    font-family: 'Geist Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('fonts/geist-sans-regular.woff2') format('woff2'),
+         url('fonts/geist-sans-regular.woff') format('woff');
+  }
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Light Mode Styles */
+body.light-mode {
+    background-color: #fff;
+    color: #000;
+}
+
+.login-container.light-mode {
+    background-color: #f9f5f5;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-box input.light-mode {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+}
+
+.bar.light-mode {
+    background: linear-gradient(45deg, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
+
+}
+
+.bar.light-mode span {
+    color: black;
+}
+
+
+
+
+.login-btn.light-mode {
+    background-color: #E06AFF;
+    opacity: 70%;
+}
+
+.signup-btn.light-mode {
+    background-color: #cccccc;
+    color: #333;
+}
+
+.forgot-password a.light-mode {
+    color: #007bff;
+}
+
+/* Dark Mode (already set) */
+.bar {
+    
+    background: rgb(2,0,36);
+background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(103,101,101,1) 45%, rgba(23,2,23,1) 94%, rgba(2,1,4,1) 100%);
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+}
+
+
+  
+  
+
+h1 {
+    margin: 0;
+}
+
+.login-container {
+    background-color: #111;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    width: 350px;
+}
+
+.logo img {
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    background-color: #222;
+    border: 1px solid #333;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.login-btn {
+    background-color: #E06AFF;
+    color: #fff;
+}
+
+.signup-btn {
+    background-color: #444;
+    color: #fff;
+}
+
+.or-divider {
+    margin: 20px 0;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.g-signin2 {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.forgot-password {
+    font-size: 14px;
+}
+
+.forgot-password a {
+    color: #E06AFF;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background-color: #E06AFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.theme-toggle:hover {
+    background-color: #0056b3;
+}
