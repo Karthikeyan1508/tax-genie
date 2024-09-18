@@ -29,12 +29,6 @@ themeToggleBtn.textContent = 'Switch to Light Mode';
 
 themeToggleBtn.addEventListener('click', function() {
     document.body.classList.toggle('light-mode');
-    //document.body.classList.toggle('dark-mode');
-    // if (document.body.classList.contains('light-mode')) {
-    //     themeToggleBtn.textContent = 'Switch to Dark Mode';
-    // } else {
-    //     themeToggleBtn.textContent = 'Switch to Light Mode';
-    // }
 
     // Toggle the light mode on other elements like input, buttons, etc.
     document.querySelectorAll('.login-container, .input-box input, .btn, .bar, .forgot-password a').forEach(element => {
