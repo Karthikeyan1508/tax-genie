@@ -14,6 +14,17 @@ navToggler.addEventListener("click", function () {
   this.classList.toggle("active");
 });
 
+function toggle(){
+  document.body.classList.toggle('dark');
+  const icon = document.getElementById('toggle-icon');
+  if (document.body.classList.contains('dark')) {
+    icon.setAttribute('name', 'sunny');
+  } else {
+    icon.setAttribute('name', 'moon');
+  }
+}
+
+
 
 
 /**
