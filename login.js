@@ -31,7 +31,7 @@ themeToggleBtn.addEventListener('click', function() {
     document.body.classList.toggle('light-mode');
 
     // Toggle the light mode on other elements like input, buttons, etc.
-    document.querySelectorAll('.login-container, .input-box input, .btn, .bar, .forgot-password a, .profile-container, .personal-details .input-box input').forEach(element => {
+    document.querySelectorAll('.login-container, .input-box input, .btn, .bar, .forgot-password a').forEach(element => {
         element.classList.toggle('light-mode');
     });
 

@@ -1,17 +1,10 @@
 /* Default to Dark Mode */
 
-font-face {
-    font-family: 'Geist Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('fonts/geist-sans-regular.woff2') format('woff2'),
-         url('fonts/geist-sans-regular.woff') format('woff');
-  }
+
 
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Inter';
     margin: 0;
     padding: 0;
     background-color: #000;
@@ -226,17 +219,17 @@ form {
 }
 
 input {
-    width: 100%; /* Input takes up full width of parent (input-box) */
+    width: 100%; 
     padding: 10px;
-    box-sizing: border-box; /* Ensure padding doesn't affect input width */
+    box-sizing: border-box; 
 }
 
 .up-text {
-    color: white; /* 'Up' should be white in dark mode */
+    color: white; 
 }
 
 body.light-mode .up-text {
-    color: black; /* Change 'Up' to black when in light mode */
+    color: black; 
 }
 
 /* Pop-up */

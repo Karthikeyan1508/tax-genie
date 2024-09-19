@@ -11,34 +11,37 @@
     <div class="profile-container">
         <div class="bar"><h1><span style="color: #E06AFF;" class = "tax-text">Your</span><span class = "genie-text"> Profile</span></h1></div>
         <div class="personal-details">
-            <div class="input-box">
-                <label for="first-name">First Name</label>
-                <input type="text"  value="John">
+            <form id="profile">
+                <div class="input-box">
+                    <label for="first-name">First Name</label>
+                    <input type="text"  value="John">
+                </div>
+                <div class="input-box ">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" value="John">
+                </div>
+                <div class="input-box " id="username">
+                    <label for="username">Username</label>
+                    <input type="text" value="John">
+                </div>
+                <div class="input-box ">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" value="john.doe@example.com">
+                </div>
+                <div class="input-box" >
+                    <label for="ph-no">Phone</label>
+                    <input type="tel" value="9008386678">
+                </div>
+                <div class="input-box" id = "Profession">
+                    <label for="profession">Profession</label>
+                    <input type="text" value="Software Developer">
+                </div>
+                
             </div>
-            <div class="input-box ">
-                <label for="last-name">Last Name</label>
-                <input type="text" value="John">
-            </div>
-            <div class="input-box " id="username">
-                <label for="username">Username</label>
-                <input type="text" value="John">
-            </div>
-            <div class="input-box ">
-                <label for="email">Email</label>
-                <input type="email" id="email" value="john.doe@example.com">
-            </div>
-            <div class="input-box" >
-                <label for="ph-no">Phone</label>
-                <input type="tel" value="9008386678">
-            </div>
-            <div class="input-box" id = "Profession">
-                <label for="profession">Profession</label>
-                <input type="text" value="Software Developer">
-            </div>
+        </form>
             
-        </div>
     </div>
     <button class="theme-toggle" id="theme-toggle-btn">Switch to Light Mode</button>
-    <script src = "login.js"></script>
+    <script src = "profile.js"></script>
 </body>
 </html>

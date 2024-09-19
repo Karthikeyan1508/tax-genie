@@ -21,7 +21,7 @@ body {
 
 /* Light Mode Styles */
 body.light-mode p {
-    color: #000; /* Turn text color to black */
+    color: #000; 
 }
 
 body.light-mode {
