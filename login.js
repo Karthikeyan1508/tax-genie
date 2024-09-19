@@ -44,3 +44,15 @@ themeToggleBtn.addEventListener('click', function() {
 
 });
 
+document.getElementById('signup-btn').addEventListener('click', function() {
+    // Show the sign-up pop-up and overlay
+    document.getElementById('signup-popup').style.display = 'block';
+    document.getElementById('overlay').style.display = 'block';
+});
+
+document.getElementById('close-popup').addEventListener('click', function() {
+    // Hide the sign-up pop-up and overlay
+    document.getElementById('signup-popup').style.display = 'none';
+    document.getElementById('overlay').style.display = 'none';
+});
+
