@@ -4,18 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const stars = document.querySelectorAll('.rating-modal .star');
     const submitBtn = document.querySelector('.submit-btn');
     
-    // Show modal on submit
     submitBtn.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent form submission
+        event.preventDefault(); 
         modal.style.display = 'flex';
     });
     
-    // Close modal
     closeBtn.addEventListener('click', function() {
         modal.style.display = 'none';
     });
     
-    // Handle star rating
     stars.forEach(star => {
         star.addEventListener('click', function() {
             let rating = this.getAttribute('data-value');
@@ -40,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
             element.classList.toggle('light-mode');
         });
 
-        // Update the button text based on the current mode
         if (document.body.classList.contains('light-mode')) {
             themeToggleBtn.textContent = 'Switch to Dark Mode';
         } else {
