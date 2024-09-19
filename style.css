@@ -2,20 +2,11 @@
   #main.css
 \*-----------------------------------*/
 
-/**
- * copyright 2022 codewithsadee
- */
-
-
-
-
-
 /*-----------------------------------*\
   #CUSTOM PROPERTY
 \*-----------------------------------*/
 
 :root {
-
 
   /**
    * gradient color
@@ -28,7 +19,7 @@
    * typography
    */
 
-  --ff-urbanist: 'Urbanist', sans-serif;
+  --ff-urbanist: 'Inter', sans-serif;
 
   --headline-lg: 3.6rem;
   --headline-md: 2.6rem;
@@ -78,9 +69,6 @@
   --transition-2: 0.5s ease;
 
 }
-
-
-
 
 
 /*-----------------------------------*\
@@ -180,7 +168,7 @@ body {
   z-index: 1;
 }
 
-.dark.body {
+.dark .body {
   background-color: #1E1F20;
   color: #E06AFF;
   font-size: 1.6rem;
@@ -217,7 +205,7 @@ body {
   padding-inline: 12px;
   display: block;
   justify-content: space-evenly;
-  /* align-items: center;} */
+  /* width: 100vb; */
 }
 
 .body-bg-shape {
@@ -379,15 +367,6 @@ body {
   --ionicon-stroke-width: 50px;
 }
 
-/* .btn-icon.primary {
-  background-color: white;
-  transition: var(--transition-1);
-}
-
-.btn-icon.primary:is(:hover, :focus-visible) {
-  background-color: var(--electric-indigo);
-  border-color: var(--electric-indigo);
-} */
 
 .link\:hover:is(:hover, :focus-visible) {
   color: black
@@ -501,27 +480,67 @@ body {
   #HEADER
 \*-----------------------------------*/
 
+.dark #tax-logo{
+  color: white;
+}
 .header .logo {
   display: none;
 }
+.container-header{
+  margin: 0 auto;
+  padding: 0;
+  display: inline-flex;
+  justify-content:space-evenly ;
+  align-items: center;
+  background-color: #f1cbfa;
+  width: 1200px;
+  height: 90px;
+  margin-top: 0;
+  padding-left :0;
+  padding-right: 0;
+  margin-right: 1; 
+  margin-left : 1;
 
-.header {
-  position: sticky;
-  top: 0;
-  left: 0;
+}
+
+.dark .container-header{
+  margin: 0 auto ;
+  padding: 0;
+  display: inline-flex;
+  justify-content:space-evenly ;
+  align-items: center;
+  background-color:#271729 ;
+  color: white;
   width: 100%;
-  box-shadow: var(--shadow-1);
-  padding-block: 16px;
+  height: 90px;
+  margin-top: 0;
+  padding-left :35px;
+  padding-right: 35px;
+  margin-right: 10; 
+  margin-left : 10;
+
+}
+.header {
+  position: absolute;
+  /* top: 0;
+  left: 0; */
+  width: 100vw;
   z-index: 10;
   display: flex;
   justify-items: center;
   align-items: center;
-  background-color: #131314;
+  background-color: #f1cbfa;
+  /* margin-top: 20px ; */
+  padding-left :0;
+  padding-right: 0;
+  margin-right: 0;
+  margin-left: 0;
+  /* height:100px; */
 }
 
 .header.active {
   position: fixed;
-  animation: slideIn 0.5s ease forwards;
+  animation: slideIn 0.25s ease forwards;
 }
 
 @keyframes slideIn {
@@ -540,15 +559,26 @@ body {
   align-items: center;
   align-content: center;
   color: black;
+  background-color: #f1cbfa;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: fit-content;
+  height: max-content;
 
 }
 
-.dark.header .container {
+.dark .header .container {
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
   color: white;
+  background-color:#271729;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .header-action {
@@ -578,17 +608,20 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 0;
   background-color: #eeb1fd31;
-  padding-inline: 16px;
+  /* padding-inline: 20px; */
   box-shadow: var(--shadow-1);
   z-index: 1;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 auto;
+ }
 
 .dark.navbar {
   position: absolute;
@@ -650,11 +683,11 @@ body {
 }
 
 #toggle-mode ion-icon {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .dark #toggle-mode ion-icon {
-  font-size: 30px;
+  font-size: 25px;
 
 }
 
@@ -677,7 +710,7 @@ body {
   color: #E06AFF;
 }
 
-.dark.hero {
+.dark .hero {
   position: relative;
   --section-padding: 180px 64px;
   text-align: center;
@@ -718,15 +751,6 @@ body {
   margin-inline: auto;
 }
 
-/* .headline-lg .hero-title{
-  color: black;
-}
-
-.dark.hero.hero.h1.headline-lg{
-  color:white;
-} */
-
-
 
 /*-----------------------------------*\
   #TOP COLLECTION
@@ -749,6 +773,18 @@ body {
   justify-content: space-between;
   text-align:left;
   padding: 15px;
+  background-color: #f0c0fd;
+}
+
+.dark .card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align:left;
+  padding: 15px;
+  background-color: #f0c0fd;
 }
 
 .card-img {
@@ -759,7 +795,10 @@ body {
 .card-title {
   font-size: 18px;
   margin-bottom: 10px;
+  color: #271729;
 }
+
+
 
 .card-description {
   font-size: 14px;
@@ -974,88 +1013,52 @@ dark.collection-card .title-md .card-title {
 \*-----------------------------------*/
 
 .seller-card {
-  display: flex;
+  display: grid;
+  grid-column: auto;
+  justify-content: center;
   align-items: center;
   gap: 12px;
   padding: 12px;
+  border: 2px solid #271729;
+  background-color: white;
+}
+.dark .seller-card {
+  display: grid;
+  grid-column: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 2px solid white;
+  background-color:#f0c0fd;
 }
 
 .seller-card .card-banner {
   position: relative;
-  background-color: #E06AFF;
+  width: 45%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: auto;
+  margin: auto;
+  /* border: 2px solid #E06AFF; */
 }
 
-.dark.seller-card .card-banner {
+.dark .seller-card .card-banner {
   position: relative;
-  background-color: #eeb1fd31;
 }
 
 .seller-card .card-banner img {
   border-radius: inherit;
 }
 
-.seller-card .card-banner ion-icon {
-  position: absolute;
-  top: -4px;
-  right: -8px;
-  font-size: 2rem;
-  color: black;
-}
-
-.dark.seller-card .card-banner ion-icon {
-  position: absolute;
-  top: -4px;
-  right: -8px;
-  font-size: 2rem;
-  color: white;
-}
-
 .seller-card .user-name {
   margin-block-start: 2px;
-}
-
-.seller-card .btn-icon {
-  flex-shrink: 0;
-  margin-inline-start: auto;
-  border: 1px solid black;
-  background-color: #E06AFF;
-  color: black;
-  /* transition: var(--transition-1); */
-}
-
-.dark.seller-card .btn-icon {
-  flex-shrink: 0;
-  margin-inline-start: auto;
-  border: 1px solid white;
-  background-color: #eeb1fd31;
-  color: black;
-  /* transition: var(--transition-1); */
-}
-
-.seller-card .btn-icon ion-icon {
-  color: black;
-  --ionicon-stroke-width: 55px;
-}
-
-.dark.seller-card .btn-icon ion-icon {
-  color: white;
-  --ionicon-stroke-width: 55px;
-}
-
-.seller-card .btn-icon:is(:hover, :focus-visible) {
-  --bg: #E06AFF;
-  --color: black;
-}
-
-.dark.seller-card .btn-icon:is(:hover, :focus-visible) {
-  --bg: #eeb1fd31;
-  --color: white;
 }
 
 .h2.headline-md {
   color: white;
 }
-
 
 
 /*-----------------------------------*\
@@ -1087,12 +1090,12 @@ dark.collection-card .title-md .card-title {
   color: black;
 }
 
-.dark.qna-list {
+.dark .qna-list {
   margin-block-start: 60px;
   display: grid;
   gap: 16px;
   color: white;
-  background-color: #E06AFF;
+  /* background-color: #f0c0fd; */
 }
 
 
@@ -1129,22 +1132,25 @@ dark.collection-card .title-md .card-title {
   gap: 16px;
   text-align: left;
   padding: 20px;
-  color: white;
-  background-color: #E06AFF;
+  color: black;
+  background-color: #f0c0fd;
 }
 
 .qna-btn ion-icon {
   flex-shrink: 0;
 }
 
+.dark .qna-btn .title-sm{
+  color: black;
+}
 .qna-card.active .qna-btn {
-  background-color: black;
+  /* background-color: black; */
   color: #E06AFF
 }
 
 .dark.qna-card.active .qna-btn {
   background-color: #1E1F20;
-  color: white
+  color: white;
 }
 
 .qna-card.active .qna-btn>* {
@@ -1162,12 +1168,14 @@ dark.collection-card .title-md .card-title {
 
 .qna-content .body-md {
   padding: 20px;
-  color: black
+  color: black;
+  border: 0.25px solid #271729;
 }
 
 .dark .qna-content .body-md {
   padding: 20px;
-  color: white
+  color: white;
+  border : 1px solid #f0c0fd;
 }
 
 .qna-content {
@@ -1177,7 +1185,7 @@ dark.collection-card .title-md .card-title {
 
 .dark .qna-content {
   display: none;
-  color: white
+  color: white;
 }
 
 .qna-card.active .qna-content {
@@ -1187,7 +1195,7 @@ dark.collection-card .title-md .card-title {
 
 .dark .qna-card.active .qna-content {
   display: block;
-  color: white
+  color: black
 }
 
 
@@ -1226,13 +1234,14 @@ dark.collection-card .title-md .card-title {
 
 .newsletter-card {
   position: relative;
-  background-color: #E06AFF;
+  background-color:white;
   color: black;
   padding: 40px 24px;
   border-radius: var(--radius-12);
   box-shadow: var(--shadow-1);
   overflow: hidden;
   z-index: 1;
+  border:1px solid #271729;
 }
 
 .dark .newsletter-card {
@@ -1271,7 +1280,7 @@ dark.collection-card .title-md .card-title {
 }
 
 .newsletter .input-field {
-  background-color: #E06AFF;
+  background-color: gainsboro;
   font-size: var(--body-md);
   color: black;
   padding: 12px 24px;

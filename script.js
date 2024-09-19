@@ -62,7 +62,7 @@ const fetchNews = async ()=>{
   response.articles.slice(0, 6).forEach((item) => {
     str = str + `<div class="swiper-slide">
     <div class="card" style="width: 350px; height: 450px; padding: 10px; margin-left: 20px; border: 1px solid black;">
-      <img height="250px" width="330px" 
+      <img height="250px" width="330px" style ="align-items : center;"
            src="${item.urlToImage ? item.urlToImage : 'https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png'}" 
            alt="Card Image" 
            class="card-img" 
@@ -70,7 +70,7 @@ const fetchNews = async ()=>{
            style="display: block; margin: 0 auto;">
       <div class="card-content" style="margin-top:0px;">
           <h3 class="card-title">${item.title ? item.title.slice(0, 50) : "No Title Available"}</h3>
-          <p class="card-description">${item.description ? item.description.slice(0, 400) : "No Description Available"}...</p>
+          <p class="card-description">${item.description ? item.description.slice(0, 300) : "No Description Available"}...</p>
           <button><a href="${item.url}" target="_blank" class="card-btn" style="color: blue;">Read More</a></button>
       </div>
     </div>
