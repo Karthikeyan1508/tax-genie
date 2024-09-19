@@ -1,0 +1,97 @@
+/*Dark Mode styles*/
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.profile-container {
+    background-color: #111;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    width: 750px;
+    
+    
+    
+}
+
+.bar {
+    background: rgb(2,0,36);
+    background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(103,101,101,1) 45%, rgba(23,2,23,1) 94%, rgba(2,1,4,1) 100%);
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.personal-details {
+    background-color: #1E1F20;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 20px;
+    padding: 20px;
+    border-radius: 10px; 
+   
+}
+
+.input-box {
+    background-color: #1E1F20;
+  padding: 10px;
+}
+
+
+.input-box input {
+    background-color: #3a3b3d;
+}
+
+body.light-mode {
+    background-color: #fff;
+    color: #000;
+}
+
+.profile-container.light-mode {
+    background-color: #f9f5f5;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-box input.light-mode {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+}
+
+.bar.light-mode {
+    background: linear-gradient(45deg, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
+
+}
+
+.bar.light-mode span {
+    color: black;
+}
+
+/*for toggle button*/
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background-color: #E06AFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.theme-toggle:hover {
+    background-color: #c950e8;
+}

@@ -31,7 +31,7 @@ themeToggleBtn.addEventListener('click', function() {
     document.body.classList.toggle('light-mode');
 
     // Toggle the light mode on other elements like input, buttons, etc.
-    document.querySelectorAll('.login-container, .input-box input, .btn, .bar, .forgot-password a').forEach(element => {
+    document.querySelectorAll('.login-container, .input-box input, .btn, .bar, .forgot-password a, .profile-container, .personal-details .input-box input').forEach(element => {
         element.classList.toggle('light-mode');
     });
 
@@ -55,4 +55,19 @@ document.getElementById('close-popup').addEventListener('click', function() {
     document.getElementById('signup-popup').style.display = 'none';
     document.getElementById('overlay').style.display = 'none';
 });
+
+document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from refreshing the page
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    
+    
+    if (email === 'you@example.com' && password === 'yourpassword') {
+        alert('Login successful!');
+        window.location.href = 'profile.html'; // Redirect to profile page
+    } else {
+        alert('Incorrect email or password');
+    }
+});
+
 
