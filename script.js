@@ -47,13 +47,64 @@ const activeElementOnScroll = function () {
 
 window.addEventListener("scroll", activeElementOnScroll);
 
+const fetchNews = async ()=>{
+  var url = 'https://newsapi.org/v2/everything?' +
+            'q=Tax&' +             
+            'from=2024-09-01&' +      
+            'sortBy=publishedAt&' +   
+            'apiKey=7ac9f6fe81724f1da7ca674d84f52f2a';
+  var req = new Request(url);
+  
+  let a = await fetch(req)
+  let response = await a.json()
+  console.log(response)
+  let str =""
+  response.articles.slice(0, 6).forEach((item) => {
+    str = str + `<div class="swiper-slide">
+    <div class="card" style="width: 350px; height: 450px; padding: 10px; margin-left: 20px; border: 1px solid black;">
+      <img height="250px" width="330px" 
+           src="${item.urlToImage ? item.urlToImage : 'https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png'}" 
+           alt="Card Image" 
+           class="card-img" 
+           onerror="this.onerror=null; this.src='https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png';" 
+           style="display: block; margin: 0 auto;">
+      <div class="card-content" style="margin-top:0px;">
+          <h3 class="card-title">${item.title ? item.title.slice(0, 50) : "No Title Available"}</h3>
+          <p class="card-description">${item.description ? item.description.slice(0, 400) : "No Description Available"}...</p>
+          <button><a href="${item.url}" target="_blank" class="card-btn" style="color: blue;">Read More</a></button>
+      </div>
+    </div>
+ </div>`;
 
+  });
+  document.querySelector(".swiper-wrapper").innerHTML = str;
+  
+  new Swiper('.swiper-container', {
+      slidesPerView: 3,  
+      spaceBetween: 10,   
+      loop: true, 
+      centeredSlides: true,         
+      autoplay: {
+        delay: 3000,    
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+  });
+  
+  }
+  fetchNews()
 
 /**
  * SLIDER
  */
 
-const sliders = document.querySelectorAll("[data-slider]");
+/*const sliders = document.querySelectorAll("[data-slider]");
 
 const sliderInit = function (currentSlider) {
 
@@ -73,7 +124,7 @@ const sliderInit = function (currentSlider) {
   /**
    * NEXT SLIDE
    */
-  const slideNext = function () {
+  /*const slideNext = function () {
     const slideEnd = currentSlidePos >= totalSliderItems;
 
     if (slideEnd) {
@@ -90,7 +141,7 @@ const sliderInit = function (currentSlider) {
   /**
    * PREVIOUS SLIDE
    */
-  const slidePrev = function () {
+  /*const slidePrev = function () {
     if (currentSlidePos <= 0) {
       currentSlidePos = totalSliderItems;
     } else {
@@ -112,7 +163,7 @@ const sliderInit = function (currentSlider) {
    * AUTO SLIDE
    */
 
-  let autoSlideInterval;
+  /*let autoSlideInterval;
 
   const startAutoSlide = () => autoSlideInterval = setInterval(slideNext, 3000);
   startAutoSlide();
@@ -126,12 +177,12 @@ const sliderInit = function (currentSlider) {
    * RESPONSIVE
    */
 
-  window.addEventListener("resize", moveSliderItem);
+  /*window.addEventListener("resize", moveSliderItem);
 
-}
+/*}
 
 for (let i = 0, len = sliders.length; i < len; i++) { sliderInit(sliders[i]); }
-
+*/
 
 
 /**
