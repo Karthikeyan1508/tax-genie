@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"><head></head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body class="dark-mode">
+    <div class="login-container">
+        <div class="bar" style="font-family: 'Geist Sans';"><h1><span style="color: #E06AFF;">Feed</span><span class="genie-text">Back</span></h1></div>
+        <br><br>
+        <form id="feedbackForm">
+            <p>What's the most used feature of our app?</p>
+            <textarea id="featureAnswer" placeholder="Answer"></textarea>
+            
+            <p>How often do you use our app?</p>
+            <textarea id="usageAnswer" placeholder="Answer"></textarea>
+            
+            <p>What's your motivation to use our app?</p>
+            <textarea id="motivationAnswer" placeholder="Answer"></textarea>
+            
+            <p>What improvement do you want to see in our app?</p>
+            <textarea id="improvementAnswer" placeholder="Answer"></textarea>
+            
+            <button type="submit" class="submit-btn">Submit Feedback</button>
+        </form>
+    </div>
+    <!-- Star Rating Modal -->
+<div id="ratingModal" class="rating-modal">
+    <div class="rating-modal-content">
+        <span class="close-btn">×</span>
+        <h2><font color="black">Rate Our Service</font></h2>
+        <div class="stars">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+        </div>
+    </div>
+</div>
+
+    <button class="theme-toggle" id="theme-toggle-btn">Switch to Light Mode</button>
+
+    <script src="feedback.js"></script>
+
+
+
+</body></html>
