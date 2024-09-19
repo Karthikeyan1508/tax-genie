@@ -770,18 +770,19 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   text-align:left;
   padding: 15px;
   background-color: #f0c0fd;
 }
-
+.img-card{
+  overflow: hidden;
+  height: 50%;
+}
 .dark .card {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   text-align:left;
   padding: 15px;
   background-color: #f0c0fd;

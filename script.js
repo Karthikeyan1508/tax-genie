@@ -49,7 +49,7 @@ window.addEventListener("scroll", activeElementOnScroll);
 
 const fetchNews = async ()=>{
   var url = 'https://newsapi.org/v2/everything?' +
-            'q=Tax&' +             
+            'q=Tax&Finanace&Stocks&Budget&Economy&' +             
             'from=2024-09-01&' +      
             'sortBy=publishedAt&' +   
             'apiKey=7ac9f6fe81724f1da7ca674d84f52f2a';
@@ -59,22 +59,27 @@ const fetchNews = async ()=>{
   let response = await a.json()
   console.log(response)
   let str =""
-  response.articles.slice(0, 6).forEach((item) => {
-    str = str + `<div class="swiper-slide">
-    <div class="card" style="width: 350px; height: 450px; padding: 10px; margin-left: 20px; border: 1px solid black;">
-      <img height="250px" width="330px" style ="align-items : center;"
-           src="${item.urlToImage ? item.urlToImage : 'https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png'}" 
-           alt="Card Image" 
-           class="card-img" 
-           onerror="this.onerror=null; this.src='https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png';" 
-           style="display: block; margin: 0 auto;">
-      <div class="card-content" style="margin-top:0px;">
-          <h3 class="card-title">${item.title ? item.title.slice(0, 50) : "No Title Available"}</h3>
-          <p class="card-description">${item.description ? item.description.slice(0, 300) : "No Description Available"}...</p>
-          <button><a href="${item.url}" target="_blank" class="card-btn" style="color: blue;">Read More</a></button>
-      </div>
-    </div>
- </div>`;
+  response.articles.slice(0, 8).forEach((item) => {
+    if (item.urlToImage && item.description) {
+      str += `<div class="swiper-slide">
+        <div class="card" style="width: 350px; height: 450px; padding: 20px; margin-left: 20px; border: 1px solid black;">
+          <div class="img-card" style="width: 310px; overflow: hidden;">
+            <img
+              src="${item.urlToImage}" 
+              alt="Card Image" 
+              class="card-img" 
+              onerror="this.onerror=null; this.src='https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png';" 
+              style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="card-content" style="margin-top: 0px;">
+            <h3 class="card-title">${item.title ? item.title.slice(0, 50) : "No Title Available"}</h3>
+            <p class="card-description">${item.description.slice(0, 200)}...</p>
+            <button><a href="${item.url}" target="_blank" class="card-btn" style="color: grey; margin-top: 5px">Read More</a></button>
+          </div>
+        </div>
+      </div>`; 
+  }
+  
 
   });
   document.querySelector(".swiper-wrapper").innerHTML = str;
@@ -95,6 +100,20 @@ const fetchNews = async ()=>{
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+      breakpoints: {  // Responsive breakpoints
+        320: {
+          slidesPerView: 1,  // Show 1 slide on very small screens
+          spaceBetween: 10,
+        },
+        640: {
+          slidesPerView: 2,  // Show 2 slides on small screens
+          spaceBetween: 10,
+        },
+        1024: {
+          slidesPerView: 3,  // Show 3 slides on large screens
+          spaceBetween: 10,
+        },
+      }
   });
   
   }
