@@ -47,9 +47,13 @@ const activeElementOnScroll = function () {
 
 window.addEventListener("scroll", activeElementOnScroll);
 
+/**
+ * SLIDER
+ */
+
 const fetchNews = async ()=>{
   var url = 'https://newsapi.org/v2/everything?' +
-            'q=Tax&Finanace&Stocks&Budget&Economy&' +             
+            'q=Tax&Finanace&Stocks&Budget&Economy&India&' +             
             'from=2024-09-01&' +      
             'sortBy=publishedAt&' +   
             'apiKey=7ac9f6fe81724f1da7ca674d84f52f2a';
@@ -100,17 +104,17 @@ const fetchNews = async ()=>{
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-      breakpoints: {  // Responsive breakpoints
+      breakpoints: {  
         320: {
-          slidesPerView: 1,  // Show 1 slide on very small screens
+          slidesPerView: 1,  
           spaceBetween: 10,
         },
         640: {
-          slidesPerView: 2,  // Show 2 slides on small screens
+          slidesPerView: 2,  
           spaceBetween: 10,
         },
         1024: {
-          slidesPerView: 3,  // Show 3 slides on large screens
+          slidesPerView: 3,  
           spaceBetween: 10,
         },
       }
@@ -118,91 +122,6 @@ const fetchNews = async ()=>{
   
   }
   fetchNews()
-
-/**
- * SLIDER
- */
-
-/*const sliders = document.querySelectorAll("[data-slider]");
-
-const sliderInit = function (currentSlider) {
-
-  const sliderContainer = currentSlider.querySelector("[data-slider-container]");
-  const sliderPrevBtn = currentSlider.querySelector("[data-slider-prev]");
-  const sliderNextBtn = currentSlider.querySelector("[data-slider-next]");
-
-  const totalSliderVisibleItems = Number(getComputedStyle(currentSlider).getPropertyValue("--slider-item"));
-  const totalSliderItems = sliderContainer.childElementCount - totalSliderVisibleItems;
-
-  let currentSlidePos = 0;
-
-  const moveSliderItem = function () {
-    sliderContainer.style.transform = `translateX(-${sliderContainer.children[currentSlidePos].offsetLeft}px)`;
-  }
-
-  /**
-   * NEXT SLIDE
-   */
-  /*const slideNext = function () {
-    const slideEnd = currentSlidePos >= totalSliderItems;
-
-    if (slideEnd) {
-      currentSlidePos = 0;
-    } else {
-      currentSlidePos++;
-    }
-
-    moveSliderItem();
-  }
-
-  sliderNextBtn.addEventListener("click", slideNext);
-
-  /**
-   * PREVIOUS SLIDE
-   */
-  /*const slidePrev = function () {
-    if (currentSlidePos <= 0) {
-      currentSlidePos = totalSliderItems;
-    } else {
-      currentSlidePos--;
-    }
-
-    moveSliderItem();
-  }
-
-  sliderPrevBtn.addEventListener("click", slidePrev);
-
-  const dontHaveExtraItem = totalSliderItems <= 0;
-  if (dontHaveExtraItem) {
-    sliderNextBtn.setAttribute("disabled", "");
-    sliderPrevBtn.setAttribute("disabled", "");
-  }
-
-  /**
-   * AUTO SLIDE
-   */
-
-  /*let autoSlideInterval;
-
-  const startAutoSlide = () => autoSlideInterval = setInterval(slideNext, 3000);
-  startAutoSlide();
-  const stopAutoSlide = () => clearInterval(autoSlideInterval);
-
-  currentSlider.addEventListener("mouseover", stopAutoSlide);
-
-  currentSlider.addEventListener("mouseout", startAutoSlide);
-
-  /**
-   * RESPONSIVE
-   */
-
-  /*window.addEventListener("resize", moveSliderItem);
-
-/*}
-
-for (let i = 0, len = sliders.length; i < len; i++) { sliderInit(sliders[i]); }
-*/
-
 
 /**
  * ACCORDION

@@ -1,10 +1,3 @@
-/*-----------------------------------*\
-  #main.css
-\*-----------------------------------*/
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
 
 :root {
 
@@ -71,10 +64,8 @@
 }
 
 
-/*-----------------------------------*\
-  #RESET
-\*-----------------------------------*/
 
+  /* #RESET */
 
 .dark {
   color: white;
@@ -192,20 +183,12 @@ body {
   background-color: hsl(0, 0%, 70%);
 }
 
-
-
-
-
-/*-----------------------------------*\
-  #REUSED STYLE
-\*-----------------------------------*/
-
+  /* #REUSED STYLE */
 
 .container {
   padding-inline: 12px;
   display: block;
   justify-content: space-evenly;
-  /* width: 100vb; */
 }
 
 .body-bg-shape {
@@ -326,14 +309,6 @@ body {
   color: white
 }
 
-/* .headline-md,
-.title-lg,
-.title-md,
-.title-sm {
-  color: black;
-  font-weight: var(--fw-600);
-} */
-
 .headline-md,
 .title-lg,
 .title-md,
@@ -350,17 +325,12 @@ body {
   font-weight: var(--fw-600);
 }
 
-
-
-
-
 .btn-icon {
   width: 39px;
   height: 39px;
   display: grid;
   place-items: center;
   border-radius: var(--radius-circle);
-  /*border: 1px solid black;*/
 }
 
 .btn-icon ion-icon {
@@ -476,9 +446,8 @@ body {
 
 
 
-/*-----------------------------------*\
-  #HEADER
-\*-----------------------------------*/
+
+  /* #HEADER */
 
 .dark #tax-logo{
   color: white;
@@ -522,20 +491,16 @@ body {
 }
 .header {
   position: absolute;
-  /* top: 0;
-  left: 0; */
   width: 100vw;
   z-index: 10;
   display: flex;
   justify-items: center;
   align-items: center;
   background-color: #f1cbfa;
-  /* margin-top: 20px ; */
   padding-left :0;
   padding-right: 0;
   margin-right: 0;
   margin-left: 0;
-  /* height:100px; */
 }
 
 .header.active {
@@ -611,7 +576,6 @@ body {
   width: 100vw;
   height: 0;
   background-color: #eeb1fd31;
-  /* padding-inline: 20px; */
   box-shadow: var(--shadow-1);
   z-index: 1;
   overflow: hidden;
@@ -696,12 +660,7 @@ body {
   color: white;
 }
 
-
-
-
-/*-----------------------------------*\
-  #HERO
-\*-----------------------------------*/
+ /* #HERO */
 
 .hero {
   position: relative;
@@ -751,10 +710,8 @@ body {
   margin-inline: auto;
 }
 
+  /* #TOP COLLECTION */
 
-/*-----------------------------------*\
-  #TOP COLLECTION
-\*-----------------------------------*/
 .swiper-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -863,177 +820,9 @@ body {
 }
 
 
-/*.top-collection .title-wrapper .collection-label {
-  color: black;
-}
 
-.dark.top-collection .title-wrapper .collection-label {
-  color: white;
-}
 
-.top-collection .title-wrapper .btn-link {
-  display: none;
-}
-
-.top-collection .slider {
-  --slider-item: 1;
-
-  position: relative;
-  margin-inline: -8px;
-  padding: 4px 12px;
-  overflow-x: hidden;
-}
-
-.top-collection .slider-container {
-  position: relative;
-  display: flex;
-  transition: transform 300ms ease;
-}
-
-.top-collection .slider-item {
-  min-width: calc(100% / var(--slider-item));
-  width: calc(100% / var(--slider-item));
-  padding-inline: 12px;
-}
-
-.collection-card {
-  padding: 12px;
-  box-shadow: var(--shadow-1);
-}
-
-.collection-card .card-content {
-  padding: 16px;
-}
-
-.collection-card .card-profile {
-  position: relative;
-  width: 64px;
-  margin-block-start: -50px;
-  box-shadow: var(--shadow-2);
-  background-color: black;
-}
-
-.dark.collection-card .card-profile {
-  position: relative;
-  width: 64px;
-  margin-block-start: -50px;
-  box-shadow: var(--shadow-2);
-  background-color: white;
-}
-
-.collection-card .card-profile img {
-  border-radius: var(--radius-6);
-}
-
-.collection-card .card-profile ion-icon {
-  position: absolute;
-  bottom: -8px;
-  right: -8px;
-  color: black;
-  font-size: 2.3rem;
-}
-
-.dark.collection-card .card-profile ion-icon {
-  position: absolute;
-  bottom: -8px;
-  right: -8px;
-  color: white;
-  font-size: 2.3rem;
-}
-
-.collection-card .card-title {
-  margin-block-start: 12px;
-  color: black
-}
-
-.dark.collection-card .card-title {
-  margin-block-start: 12px;
-  color: white
-}
-
-.collection-card .card-author {
-  display: flex;
-  gap: 2px;
-  font-style: italic;
-}
-
-.collection-card .card-author .link {
-  font-style: normal;
-  color: black;
-}
-
-.dark.collection-card .card-author .link {
-  font-style: normal;
-  color: white;
-}
-
-.collection-card .title-md .card-title {
-  color: black;
-}
-
-dark.collection-card .title-md .card-title {
-  color: white;
-}
-
-.collection-card .card-text {
-  margin-block-start: 4px;
-}
-
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #E06AFF;
-  font-size: 1.7rem;
-  width: 32px;
-  height: 32px;
-  display: grid;
-  place-items: center;
-  border-radius: var(--radius-circle);
-  box-shadow: var(--shadow-2);
-  transition: var(--transition-1);
-}
-
-.dark.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: white;
-  font-size: 1.7rem;
-  width: 32px;
-  height: 32px;
-  display: grid;
-  place-items: center;
-  border-radius: var(--radius-circle);
-  box-shadow: var(--shadow-2);
-  transition: var(--transition-1);
-}
-
-.slider-btn:is(:hover, :focus-visible) {
-  background-color: var(--blue-violet);
-}
-
-.slider-btn:disabled {
-  display: none;
-}
-
-.slider-btn.prev {
-  left: 10px;
-}
-
-.slider-btn.next {
-  right: 10px;
-}
-
-.top-collection .container>.btn-link {
-  margin-inline: auto;
-  margin-block-start: 32px;
-}
-
-/*-----------------------------------*\
-  #SELLERS
-\*-----------------------------------*/
-
+ /* #Features */
 .seller-card {
   display: grid;
   grid-column: auto;
@@ -1083,9 +872,8 @@ dark.collection-card .title-md .card-title {
 }
 
 
-/*-----------------------------------*\
-  #QNA
-\*-----------------------------------*/
+
+  /* #QNA */
 
 .qna.headline-md {
   color: black;
@@ -1221,33 +1009,9 @@ dark.collection-card .title-md .card-title {
 }
 
 
-/*-----------------------------------*\
-  #CONTACT
-\*-----------------------------------*/
 
-.contact .section-title {
-  margin-block-end: 16px;
-}
+/*  #NEWSLETTER */
 
-.contact .btn {
-  margin-inline: auto;
-  margin-block-start: 24px;
-  color: white;
-}
-
-.dark .contact .btn {
-  margin-inline: auto;
-  margin-block-start: 24px;
-  color: black;
-}
-
-
-
-
-
-/*-----------------------------------*\
-  #NEWSLETTER
-\*-----------------------------------*/
 
 .newsletter {
   position: relative;
@@ -1364,9 +1128,9 @@ dark.collection-card .title-md .card-title {
 
 
 
-/*-----------------------------------*\
-  #FOOTER
-\*-----------------------------------*/
+
+ /* #FOOTER */
+
 
 .footer {
   background-color: #e4a5f3ee;
@@ -1468,12 +1232,7 @@ dark.collection-card .title-md .card-title {
 }
 
 
-
-
-
-/*-----------------------------------*\
-  #BACK TO TOP
-\*-----------------------------------*/
+  /* #BACK TO TOP */
 
 .back-to-top {
   background-color: var(--blue-violet);
@@ -1496,9 +1255,9 @@ dark.collection-card .title-md .card-title {
 
 
 
-/*-----------------------------------*\
-  #MEDIA QUERIES
-\*-----------------------------------*/
+
+/*  #MEDIA QUERIES */
+
 
 /**
  * responsive for large than 575px screen
