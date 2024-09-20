@@ -1,6 +1,0 @@
-<<<<<<< HEAD
-
-=======
-Hello Aane & Halset!
-hellooooooooo
->>>>>>> 0bdb81a36043f57750873518087d92882f050b8a
