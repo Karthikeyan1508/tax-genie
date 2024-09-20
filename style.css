@@ -841,6 +841,27 @@ body {
   margin-right: 10px;
  /* Space between the slides */
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .swiper-slide {
+    width: calc(50% - 20px); /* 2 slides on tablet screens */
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .swiper-slide {
+    width: calc(50% - 20px); /* 2 slides on small tablet screens */
+  }
+  .swiper-container{
+    align-items: center;
+  }
+}
+
+@media (max-width: 479px) {
+  .swiper-slide {
+    width: 100%; /* 1 slide on mobile screens */
+  }
+}
+
 
 /*.top-collection .title-wrapper .collection-label {
   color: black;
